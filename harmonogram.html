@@ -71,6 +71,12 @@
             font-family: inherit;
         }
 
+        .header-top {
+            display: flex;
+            justify-content: flex-end;
+            margin-bottom: 12px;
+        }
+
         .card {
             margin-top: 18px;
             background: rgba(2, 13, 36, 0.84);
@@ -167,6 +173,32 @@
             background: rgba(33, 88, 168, 0.95);
             color: #ffffff;
         }
+
+        .site-footer {
+            margin-top: 18px;
+            background: rgba(2, 13, 36, 0.84);
+            border: 1px solid rgba(255, 255, 255, 0.24);
+            border-radius: 16px;
+            padding: 18px 20px;
+            line-height: 1.6;
+        }
+
+        .site-footer h2 {
+            margin: 0 0 8px;
+            border-left: 4px solid var(--oranzova);
+            padding-left: 10px;
+            font-size: 1.1rem;
+        }
+
+        .site-footer p {
+            margin: 4px 0;
+        }
+
+        [data-theme="light"] .site-footer {
+            background: rgba(247, 251, 255, 0.86);
+            border-color: rgba(17, 41, 86, 0.2);
+            color: #13233f;
+        }
     </style>
 </head>
 <body>
@@ -175,10 +207,12 @@
             <a class="nav-btn" href="index.html">⬅️ Zpět</a>
             <a class="nav-btn" href="index.html">🏠 Domů</a>
             <a class="nav-btn" href="obcerstveni-a-vyziti.html">🍔 Občerstvení a vyžití</a>
-            <button class="theme-toggle" type="button" data-theme-toggle>☀️ Denní režim</button>
         </nav>
 
         <header class="card">
+            <div class="header-top">
+                <button class="theme-toggle" type="button" data-theme-toggle>☀️ Denní režim</button>
+            </div>
             <h1>Časový harmonogram</h1>
             <p class="subtitle">Přehled zápasů skupiny A, skupiny B a celé postupové části včetně čtvrtfinále, semifinále, zápasu o 3. místo a finále. Konkrétní časy doplníme později.</p>
         </header>
@@ -249,6 +283,13 @@
                 </tbody>
             </table>
         </section>
+
+        <footer class="site-footer">
+            <h2>Kontaktní údaje</h2>
+            <p>E-mail: <a href="mailto:michaldvorak4@gmail.com">michaldvorak4@gmail.com</a></p>
+            <p>Telefon: <a href="tel:+420737738496">+420 737 738 496</a></p>
+            <p>Kontaktní osoba: Michal Dvořák</p>
+        </footer>
     </div>
     <script>
         const themeButtons = document.querySelectorAll('[data-theme-toggle]');
