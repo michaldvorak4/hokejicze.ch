@@ -23,12 +23,21 @@
             min-height: 100vh;
             font-family: 'Arial', sans-serif;
             color: var(--bila);
-            background:
-                radial-gradient(circle at 20% 20%, rgba(142, 197, 255, 0.28), transparent 32%),
-                radial-gradient(circle at 80% 10%, rgba(42, 104, 217, 0.35), transparent 30%),
-                radial-gradient(circle at 50% 80%, rgba(15, 61, 145, 0.45), transparent 35%),
-                linear-gradient(135deg, var(--modra-1), var(--modra-2) 45%, var(--modra-3) 75%, #1b8cff);
+            background-image: url('https://images.pexels.com/photos/28374813/pexels-photo-28374813.jpeg');
+            background-size: cover;
+            background-position: center;
             background-attachment: fixed;
+            position: relative;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            background:
+                linear-gradient(145deg, rgba(2, 14, 44, 0.84), rgba(6, 22, 58, 0.76)),
+                radial-gradient(circle at 18% 22%, rgba(255, 157, 45, 0.2), transparent 38%);
+            z-index: -1;
         }
 
         .ice-lines {
@@ -36,9 +45,9 @@
             inset: 0;
             pointer-events: none;
             background-image:
-                linear-gradient(90deg, transparent 49.2%, rgba(255, 255, 255, 0.12) 49.2%, rgba(255, 255, 255, 0.12) 50.8%, transparent 50.8%),
-                linear-gradient(0deg, transparent 70%, rgba(255, 255, 255, 0.08) 70.5%, transparent 71%);
-            opacity: 0.6;
+                linear-gradient(90deg, transparent 49.2%, rgba(255, 255, 255, 0.08) 49.2%, rgba(255, 255, 255, 0.08) 50.8%, transparent 50.8%),
+                linear-gradient(0deg, transparent 70%, rgba(255, 255, 255, 0.05) 70.5%, transparent 71%);
+            opacity: 0.45;
         }
 
         .container {
@@ -48,13 +57,13 @@
         }
 
         header {
-            background: rgba(3, 27, 78, 0.58);
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            background: rgba(3, 16, 40, 0.78);
+            border: 1px solid rgba(255, 255, 255, 0.28);
             border-radius: 18px;
-            backdrop-filter: blur(4px);
+            backdrop-filter: blur(6px);
             text-align: center;
             padding: 34px 24px;
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.42);
         }
 
         h1 {
@@ -68,21 +77,21 @@
         .subtitle {
             margin: 12px 0 0;
             font-size: 1.2rem;
-            color: #d8ebff;
+            color: #edf5ff;
         }
 
         .card {
             margin-top: 22px;
-            background: rgba(2, 17, 50, 0.72);
-            border: 1px solid rgba(255, 255, 255, 0.16);
+            background: rgba(2, 13, 36, 0.84);
+            border: 1px solid rgba(255, 255, 255, 0.24);
             border-radius: 16px;
             padding: 30px;
-            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.24);
+            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.38);
         }
 
         .card h2 {
             margin-top: 0;
-            border-left: 4px solid #8ec5ff;
+            border-left: 4px solid var(--oranzova);
             padding-left: 10px;
         }
 
@@ -90,8 +99,8 @@
             line-height: 1.75;
             font-size: 1.15rem;
             white-space: pre-line;
-            background: rgba(255, 255, 255, 0.08);
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            background: rgba(0, 0, 0, 0.28);
+            border: 1px solid rgba(255, 255, 255, 0.28);
             border-radius: 12px;
             padding: 20px;
             min-height: 240px;
@@ -122,21 +131,24 @@
         }
 
         .btn-primary {
-            background: #ff2f54;
-            color: white;
-            box-shadow: 0 8px 20px rgba(255, 47, 84, 0.35);
+            background: #1e3f7a;
+            color: #ffffff;
+            border: 1px solid rgba(255, 255, 255, 0.35);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.32);
         }
 
         .btn-secondary {
-            background: #8ec5ff;
-            color: #032052;
-            box-shadow: 0 8px 20px rgba(142, 197, 255, 0.28);
+            background: rgba(20, 49, 96, 0.95);
+            color: #ffffff;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.28);
         }
 
         .btn-icon {
             color: var(--oranzova);
             font-size: 1.1rem;
             line-height: 1;
+            filter: saturate(1.1) brightness(1.1);
         }
 
         .btn-disabled {
@@ -164,8 +176,8 @@
 
         .teams-table th,
         .group-table th {
-            background: rgba(255, 255, 255, 0.12);
-            color: #d8ebff;
+            background: rgba(255, 157, 45, 0.24);
+            color: #ffffff;
         }
 
         .group-wrap {
@@ -176,7 +188,7 @@
 
         .group-box h3 {
             margin: 0 0 10px;
-            color: #d8ebff;
+            color: #f4f8ff;
         }
 
         .diag {
