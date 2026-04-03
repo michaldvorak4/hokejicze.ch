@@ -75,7 +75,7 @@
             background: rgba(2, 17, 50, 0.72);
             border: 1px solid rgba(255, 255, 255, 0.16);
             border-radius: 16px;
-            padding: 26px;
+            padding: 30px;
             box-shadow: 0 12px 28px rgba(0, 0, 0, 0.24);
         }
 
@@ -87,8 +87,13 @@
 
         .info {
             line-height: 1.75;
-            font-size: 1.08rem;
+            font-size: 1.15rem;
             white-space: pre-line;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 12px;
+            padding: 20px;
+            min-height: 240px;
         }
 
         .actions {
@@ -96,6 +101,7 @@
             flex-wrap: wrap;
             gap: 12px;
             margin-top: 20px;
+            justify-content: center;
         }
 
         .btn {
@@ -122,6 +128,11 @@
             color: #032052;
             box-shadow: 0 8px 20px rgba(142, 197, 255, 0.28);
         }
+
+        .btn-disabled {
+            opacity: 0.72;
+            pointer-events: none;
+        }
     </style>
 </head>
 <body>
@@ -145,7 +156,8 @@ Hřiště: hraje se na asfaltu, florbalové mantinely 20x10 m (2 hřiště)</p>
 
             <div class="actions">
                 <a class="btn btn-primary" href="https://docs.google.com/forms/d/1JX-1A7jdqEMe4naP6St_THMiYpm7XcnhRR6VnxrarWU/edit" target="_blank" rel="noopener noreferrer">Přihlášení týmu</a>
-                <a class="btn btn-secondary" href="https://mapy.com/s/gurovogope" target="_blank" rel="noopener noreferrer">Mapa místa konání</a>
+                <a class="btn btn-secondary" href="https://mapy.com/s/fomusuzuja" target="_blank" rel="noopener noreferrer">Mapa místa konání</a>
+                <a class="btn btn-secondary btn-disabled" href="#" aria-disabled="true">Pravidla (doplníme)</a>
             </div>
         </section>
     </div>
