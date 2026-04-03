@@ -3,56 +3,151 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hokejicze.ch | Pravidla a turnaj</title>
+    <title>Kolej cup 2026 | Hokejbalový turnaj</title>
     <style>
-        body { font-family: 'Arial', sans-serif; line-height: 1.6; max-width: 800px; margin: 0 auto; padding: 20px; background: #f0f2f5; color: #1c1e21; }
-        header { background: #7a0019; color: white; padding: 30px; text-align: center; border-radius: 12px; margin-bottom: 20px; }
-        .obsah { background: white; padding: 30px; border-radius: 12px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
-        h1 { color: #ffffff; }
-        h2 { color: #003366; border-bottom: 2px solid #003366; padding-bottom: 10px; }
-        table { width: 100%; border-collapse: collapse; margin: 10px 0 25px; }
-        th, td { border: 1px solid #d0d7de; padding: 10px; text-align: left; }
-        th { background: #f6f8fa; }
-        .tlacitko { display: inline-block; background: #cc0000; color: white; padding: 15px 30px; text-decoration: none; border-radius: 8px; font-weight: bold; margin-top: 20px; }
+        :root {
+            --modra-1: #031b4e;
+            --modra-2: #0f3d91;
+            --modra-3: #2a68d9;
+            --modra-4: #8ec5ff;
+            --bila: #ffffff;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            font-family: 'Arial', sans-serif;
+            color: var(--bila);
+            background:
+                radial-gradient(circle at 20% 20%, rgba(142, 197, 255, 0.28), transparent 32%),
+                radial-gradient(circle at 80% 10%, rgba(42, 104, 217, 0.35), transparent 30%),
+                radial-gradient(circle at 50% 80%, rgba(15, 61, 145, 0.45), transparent 35%),
+                linear-gradient(135deg, var(--modra-1), var(--modra-2) 45%, var(--modra-3) 75%, #1b8cff);
+            background-attachment: fixed;
+        }
+
+        .ice-lines {
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            background-image:
+                linear-gradient(90deg, transparent 49.2%, rgba(255, 255, 255, 0.12) 49.2%, rgba(255, 255, 255, 0.12) 50.8%, transparent 50.8%),
+                linear-gradient(0deg, transparent 70%, rgba(255, 255, 255, 0.08) 70.5%, transparent 71%);
+            opacity: 0.6;
+        }
+
+        .container {
+            max-width: 920px;
+            margin: 0 auto;
+            padding: 28px 20px 40px;
+        }
+
+        header {
+            background: rgba(3, 27, 78, 0.58);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 18px;
+            backdrop-filter: blur(4px);
+            text-align: center;
+            padding: 34px 24px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+        }
+
+        h1 {
+            margin: 0;
+            font-size: clamp(2.8rem, 8vw, 5.2rem);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 0 6px 18px rgba(0, 0, 0, 0.45);
+        }
+
+        .subtitle {
+            margin: 12px 0 0;
+            font-size: 1.2rem;
+            color: #d8ebff;
+        }
+
+        .card {
+            margin-top: 22px;
+            background: rgba(2, 17, 50, 0.72);
+            border: 1px solid rgba(255, 255, 255, 0.16);
+            border-radius: 16px;
+            padding: 26px;
+            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.24);
+        }
+
+        .card h2 {
+            margin-top: 0;
+            border-left: 4px solid #8ec5ff;
+            padding-left: 10px;
+        }
+
+        .info {
+            line-height: 1.75;
+            font-size: 1.08rem;
+            white-space: pre-line;
+        }
+
+        .actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            text-decoration: none;
+            padding: 12px 18px;
+            border-radius: 10px;
+            font-weight: 700;
+            transition: transform 0.15s ease, box-shadow 0.15s ease;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+
+        .btn-primary {
+            background: #ff2f54;
+            color: white;
+            box-shadow: 0 8px 20px rgba(255, 47, 84, 0.35);
+        }
+
+        .btn-secondary {
+            background: #8ec5ff;
+            color: #032052;
+            box-shadow: 0 8px 20px rgba(142, 197, 255, 0.28);
+        }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Hokejicze.ch</h1>
-        <p>Oficiální stránky hokejového turnaje</p>
-    </header>
+    <div class="ice-lines" aria-hidden="true"></div>
 
-    <div class="obsah">
-        <h2>Pravidla turnaje</h2>
-        <ul>
-            <li>Hraje se fair-play a s respektem k soupeři.</li>
-            <li>Povinná kompletní hokejová výstroj.</li>
-            <li>Zákaz úmyslných faulů a nebezpečné hry.</li>
-        </ul>
+    <div class="container">
+        <header>
+            <h1>Kolej cup 2026</h1>
+            <p class="subtitle">Hokejbalový turnaj na kolejích VŠB-TUO</p>
+        </header>
 
-        <h2>Nadcházející zápasy</h2>
-        <table>
-            <thead>
-                <tr>
-                    <th>Datum</th>
-                    <th>Soupeř</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>12. 4. 2026</td>
-                    <td>HC Lvi Praha</td>
-                </tr>
-                <tr>
-                    <td>19. 4. 2026</td>
-                    <td>SK Lední Vlci Brno</td>
-                </tr>
-            </tbody>
-        </table>
-        
-        <h2>Přihláška</h2>
-        <p>Pro přihlášení kontaktujte organizátora.</p>
-        <a href="#" class="tlacitko">PŘIHLÁSIT SE</a>
+        <section class="card">
+            <h2>Základní informace</h2>
+            <p class="info">Vážení příznivci kvalitních sportovních akcích. Tímto formulářem máš možnost přihlásit svůj tým o minimálně 3 až 6 hráčích na první (možná poslední) ročník hokejbalového turnaje na kolejích VŠB-TUO.
+
+Kdy: sobota 30. 5. 2026
+Kde: koleje VŠB-TUO - Poruba
+Startovné: 1200,- za tým
+Počet týmů: maximálně 10 rozdělených do 2 skupin
+Hřiště: hraje se na asfaltu, florbalové mantinely 20x10 m (2 hřiště)</p>
+
+            <div class="actions">
+                <a class="btn btn-primary" href="https://docs.google.com/forms/d/1JX-1A7jdqEMe4naP6St_THMiYpm7XcnhRR6VnxrarWU/edit" target="_blank" rel="noopener noreferrer">Přihlášení týmu</a>
+                <a class="btn btn-secondary" href="https://mapy.com/s/gurovogope" target="_blank" rel="noopener noreferrer">Mapa místa konání</a>
+            </div>
+        </section>
     </div>
 </body>
 </html>
