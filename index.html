@@ -46,12 +46,6 @@
             padding: 28px 20px 40px;
         }
 
-        .top-controls {
-            display: flex;
-            justify-content: flex-end;
-            margin-bottom: 12px;
-        }
-
         .theme-toggle {
             border: 1px solid rgba(255, 255, 255, 0.45);
             background: rgba(30, 63, 122, 0.9);
@@ -60,6 +54,12 @@
             padding: 10px 14px;
             font-weight: 700;
             cursor: pointer;
+        }
+
+        .header-top {
+            display: flex;
+            justify-content: flex-end;
+            margin-bottom: 14px;
         }
 
         header {
@@ -353,14 +353,41 @@
             background: rgba(33, 88, 168, 0.95);
             color: #ffffff;
         }
+
+        [data-theme="light"] .site-footer {
+            background: rgba(247, 251, 255, 0.86);
+            border-color: rgba(17, 41, 86, 0.2);
+            color: #13233f;
+        }
+
+        .site-footer {
+            margin-top: 22px;
+            background: rgba(2, 13, 36, 0.84);
+            border: 1px solid rgba(255, 255, 255, 0.24);
+            border-radius: 16px;
+            padding: 18px 20px;
+            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.28);
+            line-height: 1.6;
+        }
+
+        .site-footer h2 {
+            margin: 0 0 8px;
+            border-left: 4px solid var(--oranzova);
+            padding-left: 10px;
+            font-size: 1.1rem;
+        }
+
+        .site-footer p {
+            margin: 4px 0;
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="top-controls">
-            <button class="theme-toggle" type="button" data-theme-toggle>☀️ Denní režim</button>
-        </div>
         <header>
+            <div class="header-top">
+                <button class="theme-toggle" type="button" data-theme-toggle>☀️ Denní režim</button>
+            </div>
             <h1>Kolej cup 2026</h1>
             <p class="subtitle">Hokejbalový turnaj na kolejích VŠB-TUO</p>
         </header>
@@ -404,6 +431,14 @@ Hřiště: hraje se na asfaltu, florbalové mantinely 20x10 m (2 hřiště)</p>
                     <tr><td>10</td><td>Tým 10</td></tr>
                 </tbody>
             </table>
+        </section>
+
+        <section class="card">
+            <h2>Časový harmonogram</h2>
+            <p class="playoff-note">Kompletní rozpis skupin i vyřazovací části najdeš na samostatné stránce harmonogramu.</p>
+            <div class="schedule-bar">
+                <a class="schedule-link" href="harmonogram.html">🕒 Časový harmonogram turnaje</a>
+            </div>
         </section>
 
         <section class="card">
@@ -504,10 +539,14 @@ Hřiště: hraje se na asfaltu, florbalové mantinely 20x10 m (2 hřiště)</p>
                     </div>
                 </div>
             </div>
-            <div class="schedule-bar">
-                <a class="schedule-link" href="harmonogram.html">🕒 Časový harmonogram turnaje</a>
-            </div>
         </section>
+
+        <footer class="site-footer">
+            <h2>Kontaktní údaje</h2>
+            <p>E-mail: <a href="mailto:michaldvorak4@gmail.com">michaldvorak4@gmail.com</a></p>
+            <p>Telefon: <a href="tel:+420737738496">+420 737 738 496</a></p>
+            <p>Kontaktní osoba: Michal Dvořák</p>
+        </footer>
     </div>
     <script>
         const themeButtons = document.querySelectorAll('[data-theme-toggle]');
