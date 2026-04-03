@@ -60,6 +60,17 @@
             gap: 8px;
         }
 
+        .theme-toggle {
+            border: 1px solid rgba(255, 255, 255, 0.45);
+            background: rgba(30, 63, 122, 0.9);
+            color: #ffffff;
+            border-radius: 10px;
+            padding: 10px 14px;
+            font-weight: 700;
+            cursor: pointer;
+            font-family: inherit;
+        }
+
         .card {
             margin-top: 18px;
             background: rgba(2, 13, 36, 0.84);
@@ -117,6 +128,45 @@
             color: #d6e8ff;
             font-size: 0.95rem;
         }
+
+        [data-theme="light"] body {
+            color: #13233f;
+        }
+
+        [data-theme="light"] body::before {
+            background: linear-gradient(145deg, rgba(235, 243, 255, 0.82), rgba(223, 236, 255, 0.74));
+        }
+
+        [data-theme="light"] .card {
+            background: rgba(247, 251, 255, 0.86);
+            border-color: rgba(17, 41, 86, 0.2);
+            box-shadow: 0 10px 25px rgba(10, 24, 50, 0.16);
+        }
+
+        [data-theme="light"] .subtitle,
+        [data-theme="light"] .hint {
+            color: #203a63;
+        }
+
+        [data-theme="light"] table {
+            background: rgba(255, 255, 255, 0.86);
+            color: #13233f;
+        }
+
+        [data-theme="light"] th,
+        [data-theme="light"] td {
+            border-color: rgba(20, 45, 88, 0.18);
+        }
+
+        [data-theme="light"] th {
+            background: rgba(255, 157, 45, 0.33);
+        }
+
+        [data-theme="light"] .nav-btn,
+        [data-theme="light"] .theme-toggle {
+            background: rgba(33, 88, 168, 0.95);
+            color: #ffffff;
+        }
     </style>
 </head>
 <body>
@@ -125,6 +175,7 @@
             <a class="nav-btn" href="index.html">⬅️ Zpět</a>
             <a class="nav-btn" href="index.html">🏠 Domů</a>
             <a class="nav-btn" href="obcerstveni-a-vyziti.html">🍔 Občerstvení a vyžití</a>
+            <button class="theme-toggle" type="button" data-theme-toggle>☀️ Denní režim</button>
         </nav>
 
         <header class="card">
@@ -199,5 +250,37 @@
             </table>
         </section>
     </div>
+    <script>
+        const themeButtons = document.querySelectorAll('[data-theme-toggle]');
+        const themeStorageKey = 'kolej-cup-theme';
+
+        function getInitialTheme() {
+            const storedTheme = localStorage.getItem(themeStorageKey);
+            if (storedTheme === 'light' || storedTheme === 'dark') {
+                return storedTheme;
+            }
+            return window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+        }
+
+        function applyTheme(theme) {
+            document.documentElement.setAttribute('data-theme', theme);
+            const label = theme === 'light' ? '🌙 Noční režim' : '☀️ Denní režim';
+            themeButtons.forEach((button) => {
+                button.textContent = label;
+                button.setAttribute('aria-label', label);
+            });
+        }
+
+        applyTheme(getInitialTheme());
+
+        themeButtons.forEach((button) => {
+            button.addEventListener('click', () => {
+                const currentTheme = document.documentElement.getAttribute('data-theme') || 'dark';
+                const nextTheme = currentTheme === 'dark' ? 'light' : 'dark';
+                applyTheme(nextTheme);
+                localStorage.setItem(themeStorageKey, nextTheme);
+            });
+        });
+    </script>
 </body>
 </html>
