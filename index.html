@@ -10,6 +10,7 @@
             --modra-2: #0f3d91;
             --modra-3: #2a68d9;
             --modra-4: #8ec5ff;
+            --oranzova: #ff9d2d;
             --bila: #ffffff;
         }
 
@@ -105,7 +106,10 @@
         }
 
         .btn {
-            display: inline-block;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            justify-content: center;
             text-decoration: none;
             padding: 12px 18px;
             border-radius: 10px;
@@ -129,9 +133,60 @@
             box-shadow: 0 8px 20px rgba(142, 197, 255, 0.28);
         }
 
+        .btn-icon {
+            color: var(--oranzova);
+            font-size: 1.1rem;
+            line-height: 1;
+        }
+
         .btn-disabled {
             opacity: 0.72;
             pointer-events: none;
+        }
+
+        .teams-table,
+        .group-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: rgba(255, 255, 255, 0.06);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .teams-table th,
+        .teams-table td,
+        .group-table th,
+        .group-table td {
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 10px;
+            text-align: left;
+        }
+
+        .teams-table th,
+        .group-table th {
+            background: rgba(255, 255, 255, 0.12);
+            color: #d8ebff;
+        }
+
+        .group-wrap {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 16px;
+        }
+
+        .group-box h3 {
+            margin: 0 0 10px;
+            color: #d8ebff;
+        }
+
+        .diag {
+            background: rgba(255, 157, 45, 0.34);
+            text-align: center !important;
+            font-weight: 700;
+        }
+
+        .center {
+            text-align: center !important;
         }
     </style>
 </head>
@@ -155,9 +210,62 @@ Počet týmů: maximálně 10 rozdělených do 2 skupin
 Hřiště: hraje se na asfaltu, florbalové mantinely 20x10 m (2 hřiště)</p>
 
             <div class="actions">
-                <a class="btn btn-primary" href="https://docs.google.com/forms/d/1JX-1A7jdqEMe4naP6St_THMiYpm7XcnhRR6VnxrarWU/edit" target="_blank" rel="noopener noreferrer">Přihlášení týmu</a>
-                <a class="btn btn-secondary" href="https://mapy.com/s/fomusuzuja" target="_blank" rel="noopener noreferrer">Mapa místa konání</a>
-                <a class="btn btn-secondary btn-disabled" href="#" aria-disabled="true">Pravidla (doplníme)</a>
+                <a class="btn btn-primary" href="https://docs.google.com/forms/d/1JX-1A7jdqEMe4naP6St_THMiYpm7XcnhRR6VnxrarWU/edit" target="_blank" rel="noopener noreferrer"><span class="btn-icon" aria-hidden="true">📝</span>Přihlášení týmu</a>
+                <a class="btn btn-secondary" href="https://mapy.com/s/fomusuzuja" target="_blank" rel="noopener noreferrer"><span class="btn-icon" aria-hidden="true">📍</span>Mapa místa konání</a>
+                <a class="btn btn-secondary btn-disabled" href="#" aria-disabled="true"><span class="btn-icon" aria-hidden="true">📘</span>Pravidla (doplníme)</a>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>Přihlášené týmy</h2>
+            <table class="teams-table" aria-label="Seznam přihlášených týmů">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Název týmu</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>1</td><td>Tým 1</td></tr>
+                    <tr><td>2</td><td>Tým 2</td></tr>
+                    <tr><td>3</td><td>Tým 3</td></tr>
+                    <tr><td>4</td><td>Tým 4</td></tr>
+                    <tr><td>5</td><td>Tým 5</td></tr>
+                    <tr><td>6</td><td>Tým 6</td></tr>
+                    <tr><td>7</td><td>Tým 7</td></tr>
+                    <tr><td>8</td><td>Tým 8</td></tr>
+                    <tr><td>9</td><td>Tým 9</td></tr>
+                    <tr><td>10</td><td>Tým 10</td></tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="card">
+            <h2>Schéma turnaje (2 skupiny po 5 týmech)</h2>
+            <div class="group-wrap">
+                <div class="group-box">
+                    <h3>Skupina A</h3>
+                    <table class="group-table" aria-label="Skupina A - rozpis zápasů">
+                        <tr><th></th><th>A1</th><th>A2</th><th>A3</th><th>A4</th><th>A5</th></tr>
+                        <tr><th>A1</th><td class="diag">X</td><td class="center"></td><td class="center"></td><td class="center"></td><td class="center"></td></tr>
+                        <tr><th>A2</th><td class="center"></td><td class="diag">X</td><td class="center"></td><td class="center"></td><td class="center"></td></tr>
+                        <tr><th>A3</th><td class="center"></td><td class="center"></td><td class="diag">X</td><td class="center"></td><td class="center"></td></tr>
+                        <tr><th>A4</th><td class="center"></td><td class="center"></td><td class="center"></td><td class="diag">X</td><td class="center"></td></tr>
+                        <tr><th>A5</th><td class="center"></td><td class="center"></td><td class="center"></td><td class="center"></td><td class="diag">X</td></tr>
+                    </table>
+                </div>
+
+                <div class="group-box">
+                    <h3>Skupina B</h3>
+                    <table class="group-table" aria-label="Skupina B - rozpis zápasů">
+                        <tr><th></th><th>B1</th><th>B2</th><th>B3</th><th>B4</th><th>B5</th></tr>
+                        <tr><th>B1</th><td class="diag">X</td><td class="center"></td><td class="center"></td><td class="center"></td><td class="center"></td></tr>
+                        <tr><th>B2</th><td class="center"></td><td class="diag">X</td><td class="center"></td><td class="center"></td><td class="center"></td></tr>
+                        <tr><th>B3</th><td class="center"></td><td class="center"></td><td class="diag">X</td><td class="center"></td><td class="center"></td></tr>
+                        <tr><th>B4</th><td class="center"></td><td class="center"></td><td class="center"></td><td class="diag">X</td><td class="center"></td></tr>
+                        <tr><th>B5</th><td class="center"></td><td class="center"></td><td class="center"></td><td class="center"></td><td class="diag">X</td></tr>
+                    </table>
+                </div>
             </div>
         </section>
     </div>
