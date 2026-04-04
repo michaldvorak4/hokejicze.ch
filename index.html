@@ -295,13 +295,13 @@
 
         [data-theme="light"] body::before {
             background:
-                linear-gradient(145deg, rgba(235, 243, 255, 0.82), rgba(223, 236, 255, 0.74)),
-                radial-gradient(circle at 18% 22%, rgba(255, 157, 45, 0.16), transparent 40%);
+                linear-gradient(145deg, rgba(178, 196, 226, 0.72), rgba(155, 181, 220, 0.66)),
+                radial-gradient(circle at 18% 22%, rgba(255, 157, 45, 0.12), transparent 42%);
         }
 
         [data-theme="light"] header,
         [data-theme="light"] .card {
-            background: rgba(247, 251, 255, 0.86);
+            background: rgba(227, 236, 250, 0.9);
             border-color: rgba(17, 41, 86, 0.2);
             box-shadow: 0 10px 25px rgba(10, 24, 50, 0.16);
         }
@@ -318,7 +318,7 @@
         [data-theme="light"] .placement,
         [data-theme="light"] .teams-table,
         [data-theme="light"] .group-table {
-            background: rgba(255, 255, 255, 0.86);
+            background: rgba(236, 243, 253, 0.92);
             border-color: rgba(20, 45, 88, 0.22);
             color: #13233f;
         }
@@ -374,20 +374,6 @@
             display: block;
         }
 
-        .map-link {
-            margin-top: 12px;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            color: #ffd8a3;
-            font-weight: 700;
-            word-break: break-all;
-        }
-
-        .map-link:hover {
-            color: #ffffff;
-        }
-
         .contact-strip {
             margin-top: 6px;
             display: flex;
@@ -410,6 +396,30 @@
 
         .contact-item a {
             color: #ffd8a3;
+        }
+
+        .contact-social-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: #1877f2;
+            color: #ffffff !important;
+            border: 1px solid rgba(255, 255, 255, 0.55);
+            transition: transform 0.15s ease, filter 0.15s ease;
+        }
+
+        .contact-social-link:hover {
+            transform: translateY(-1px);
+            filter: brightness(1.08);
+        }
+
+        .contact-social-link svg {
+            width: 18px;
+            height: 18px;
+            fill: currentColor;
         }
 
         .contact-separator {
@@ -491,7 +501,7 @@
 
 
         [data-theme="light"] .contact-strip {
-            background: rgba(255, 255, 255, 0.92);
+            background: rgba(233, 241, 253, 0.94);
             border-color: rgba(17, 41, 86, 0.24);
         }
 
@@ -510,14 +520,6 @@
         [data-theme="light"] .map-frame-wrap {
             border-color: rgba(17, 41, 86, 0.24);
             box-shadow: 0 10px 22px rgba(10, 24, 50, 0.18);
-        }
-
-        [data-theme="light"] .map-link {
-            color: #0b3f9a;
-        }
-
-        [data-theme="light"] .map-link:hover {
-            color: #102a4d;
         }
 
         [data-theme="light"] .faq-item {
@@ -704,7 +706,6 @@ Hřiště: hraje se na asfaltu, florbalové mantinely 20x10 m (2 hřiště)</p>
             <div class="map-frame-wrap">
                 <iframe class="map-frame" src="https://www.google.com/maps?q=V%C5%A0B-TUO%20koleje%20Poruba&output=embed" title="Mapa místa konání turnaje" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
-            <a class="map-link" href="https://maps.app.goo.gl/AUreZmJZVnPGFoPw8" target="_blank" rel="noopener noreferrer">📍 Otevřít místo v Google Mapách: https://maps.app.goo.gl/AUreZmJZVnPGFoPw8</a>
         </section>
 
         <section class="card">
@@ -736,6 +737,12 @@ Hřiště: hraje se na asfaltu, florbalové mantinely 20x10 m (2 hřiště)</p>
                 <span class="contact-item">E-mail: <a href="mailto:michaldvorak4@gmail.com">michaldvorak4@gmail.com</a></span>
                 <span class="contact-separator" aria-hidden="true">/</span>
                 <span class="contact-item">Telefon: <a href="tel:+420737738496">+420 737 738 496</a></span>
+                <span class="contact-separator" aria-hidden="true">/</span>
+                <a class="contact-social-link" href="https://www.facebook.com/events/" target="_blank" rel="noopener noreferrer" aria-label="Facebook událost turnaje" title="Facebook událost turnaje">
+                    <svg viewBox="0 0 320 512" aria-hidden="true" focusable="false">
+                        <path d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"></path>
+                    </svg>
+                </a>
             </div>
         </footer>
     </div>
