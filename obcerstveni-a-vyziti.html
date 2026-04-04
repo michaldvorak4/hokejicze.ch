@@ -42,9 +42,11 @@
 
         .top-nav {
             display: flex;
+            flex-wrap: wrap;
             gap: 10px;
             margin-bottom: 16px;
             justify-content: center;
+            align-items: center;
         }
 
         .nav-btn {
@@ -69,17 +71,6 @@
             font-weight: 700;
             cursor: pointer;
             font-family: inherit;
-        }
-
-        .header-top {
-            display: flex;
-            justify-content: flex-end;
-            margin-bottom: 12px;
-        }
-
-        .header-controls {
-            display: inline-flex;
-            gap: 10px;
         }
 
         .audio-toggle {
@@ -256,15 +247,11 @@
             <a class="nav-btn" href="index.html">⬅️ Zpět</a>
             <a class="nav-btn" href="index.html">🏠 Domů</a>
             <a class="nav-btn" href="harmonogram.html">🕒 Harmonogram</a>
+            <button class="theme-toggle" type="button" data-theme-toggle>☀️ Denní režim</button>
+            <button class="audio-toggle" type="button" data-audio-toggle aria-label="Hudba vypnutá">🔇 ✖</button>
         </nav>
 
         <section class="card">
-            <div class="header-top">
-                <div class="header-controls">
-                    <button class="theme-toggle" type="button" data-theme-toggle>☀️ Denní režim</button>
-                    <button class="audio-toggle" type="button" data-audio-toggle aria-label="Hudba vypnutá">🔇 ✖</button>
-                </div>
-            </div>
             <h1>Občerstvení a vyžití</h1>
             <p class="subtitle">Průběžně doplníme kompletní nabídku občerstvení a doprovodného programu.</p>
             <ul>
