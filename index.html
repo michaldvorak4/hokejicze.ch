@@ -424,36 +424,29 @@
         }
 
         .contact-socials {
-            margin-top: 12px;
+            margin-top: 14px;
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 10px;
+            gap: 14px;
         }
 
         .contact-social-link {
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            width: 56px;
-            height: 56px;
-            border-radius: 10px;
-            background: rgba(31, 67, 130, 0.78);
             color: #ffffff !important;
-            border: 1px solid rgba(255, 255, 255, 0.35);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.24);
-            transition: transform 0.15s ease, filter 0.15s ease, background-color 0.15s ease;
+            transition: transform 0.15s ease, filter 0.15s ease;
         }
 
         .contact-social-link:hover {
             transform: translateY(-1px);
-            filter: brightness(1.08);
-            background: rgba(43, 90, 170, 0.82);
+            filter: brightness(1.12);
         }
 
         .contact-social-link svg {
-            width: 32px;
-            height: 32px;
+            width: 34px;
+            height: 34px;
             fill: currentColor;
         }
 
@@ -507,10 +500,7 @@
         }
         .site-footer {
             margin-top: 28px;
-            background: rgba(2, 13, 36, 0.72);
-            border-top: 1px solid rgba(255, 255, 255, 0.35);
-            border-radius: 14px;
-            padding: 16px 12px 10px;
+            padding: 0;
             line-height: 1.6;
         }
 
@@ -553,8 +543,7 @@
         }
 
         [data-theme="light"] .contact-social-link {
-            background: rgba(33, 88, 168, 0.9);
-            border-color: rgba(255, 255, 255, 0.48);
+            color: #0f3d91 !important;
         }
 
         [data-theme="light"] .map-frame-wrap {
@@ -576,8 +565,6 @@
         }
 
         [data-theme="light"] .site-footer {
-            background: rgba(227, 236, 250, 0.9);
-            border-top-color: rgba(17, 41, 86, 0.3);
             color: #13233f;
         }
     </style>
@@ -806,6 +793,7 @@ Hřiště: hraje se na asfaltu, florbalové mantinely 20x10 m (2 hřiště)</p>
         const themeStorageKey = 'kolej-cup-theme';
         const audioStorageKey = 'kolej-cup-audio-enabled';
         const youtubeVideoId = '7TBam6gzgLM';
+        const audioStartSeconds = 2;
         let ytPlayer = null;
         let isPlayerReady = false;
 
@@ -858,13 +846,15 @@ Hřiště: hraje se na asfaltu, florbalové mantinely 20x10 m (2 hřiště)</p>
                     loop: 1,
                     modestbranding: 1,
                     playlist: youtubeVideoId,
-                    rel: 0
+                    rel: 0,
+                    start: audioStartSeconds
                 },
                 events: {
                     onReady: (event) => {
                         isPlayerReady = true;
                         if (getAudioEnabled()) {
                             event.target.unMute();
+                            event.target.seekTo(audioStartSeconds, true);
                             event.target.playVideo();
                         } else {
                             event.target.mute();
@@ -909,6 +899,7 @@ Hřiště: hraje se na asfaltu, florbalové mantinely 20x10 m (2 hřiště)</p>
             loadYouTubeApi();
             if (isPlayerReady && ytPlayer) {
                 ytPlayer.unMute();
+                ytPlayer.seekTo(audioStartSeconds, true);
                 ytPlayer.playVideo();
             }
         }
