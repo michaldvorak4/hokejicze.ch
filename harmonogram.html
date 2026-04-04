@@ -155,7 +155,7 @@
         .contact-strip {
             margin-top: 6px;
             display: flex;
-            flex-wrap: wrap;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             gap: 8px;
@@ -165,6 +165,14 @@
             border: 1px solid rgba(255, 255, 255, 0.28);
             border-radius: 10px;
             padding: 10px 14px;
+        }
+
+        .contact-details {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
         }
 
         .contact-item {
@@ -182,11 +190,11 @@
         }
 
         .contact-socials {
-            margin-top: 12px;
+            margin-top: 14px;
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 10px;
+            gap: 14px;
         }
 
         [data-theme="light"] body {
@@ -279,16 +287,11 @@
 
         .site-footer {
             margin-top: 28px;
-            background: rgba(2, 13, 36, 0.72);
-            border-top: 1px solid rgba(255, 255, 255, 0.35);
-            border-radius: 14px;
-            padding: 16px 12px 10px;
+            padding: 0;
             line-height: 1.6;
         }
 
         [data-theme="light"] .site-footer {
-            background: rgba(227, 236, 250, 0.9);
-            border-top-color: rgba(17, 41, 86, 0.3);
             color: #13233f;
         }
     </style>
@@ -381,11 +384,13 @@
 
         <footer class="site-footer">
             <div class="contact-strip" aria-label="Kontaktní údaje pořadatele">
-                <span class="contact-item">Michal Dvořák</span>
-                <span class="contact-separator" aria-hidden="true">/</span>
-                <span class="contact-item">E-mail: <a href="mailto:michaldvorak4@gmail.com">michaldvorak4@gmail.com</a></span>
-                <span class="contact-separator" aria-hidden="true">/</span>
-                <span class="contact-item">Telefon: <a href="tel:+420737738496">+420 737 738 496</a></span>
+                <div class="contact-details">
+                    <span class="contact-item">Michal Dvořák</span>
+                    <span class="contact-separator" aria-hidden="true">/</span>
+                    <span class="contact-item">E-mail: <a href="mailto:michaldvorak4@gmail.com">michaldvorak4@gmail.com</a></span>
+                    <span class="contact-separator" aria-hidden="true">/</span>
+                    <span class="contact-item">Telefon: <a href="tel:+420737738496">+420 737 738 496</a></span>
+                </div>
             </div>
             <div class="contact-socials" aria-label="Sociální sítě">
                 <a class="contact-social-link" href="https://www.facebook.com/events/" target="_blank" rel="noopener noreferrer" aria-label="Facebook událost turnaje" title="Facebook událost turnaje">
