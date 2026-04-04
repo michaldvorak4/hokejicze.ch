@@ -60,6 +60,20 @@
             gap: 8px;
         }
 
+        .nav-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 1.95em;
+            height: 1.95em;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.36);
+            color: var(--oranzova);
+            font-size: 1.46rem;
+            line-height: 1;
+        }
+
         .theme-toggle {
             border: 1px solid rgba(255, 255, 255, 0.45);
             background: rgba(30, 63, 122, 0.9);
@@ -174,23 +188,25 @@
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            width: 42px;
-            height: 42px;
-            border-radius: 50%;
-            background: #1877f2;
+            width: 56px;
+            height: 56px;
+            border-radius: 10px;
+            background: rgba(31, 67, 130, 0.78);
             color: #ffffff !important;
-            border: 1px solid rgba(255, 255, 255, 0.55);
-            transition: transform 0.15s ease, filter 0.15s ease;
+            border: 1px solid rgba(255, 255, 255, 0.35);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.24);
+            transition: transform 0.15s ease, filter 0.15s ease, background-color 0.15s ease;
         }
 
         .contact-social-link:hover {
             transform: translateY(-1px);
             filter: brightness(1.08);
+            background: rgba(43, 90, 170, 0.82);
         }
 
         .contact-social-link svg {
-            width: 24px;
-            height: 24px;
+            width: 32px;
+            height: 32px;
             fill: currentColor;
         }
 
@@ -204,6 +220,12 @@
 
         [data-theme="light"] .contact-separator {
             color: rgba(16, 42, 84, 0.75);
+        }
+
+        [data-theme="light"] .contact-social-link {
+            background: rgba(33, 88, 168, 0.72);
+            color: #ffffff !important;
+            border-color: rgba(255, 255, 255, 0.4);
         }
 
         .site-footer {
@@ -225,9 +247,9 @@
 <body>
     <div class="container">
         <nav class="top-nav" aria-label="Navigace stránky">
-            <a class="nav-btn" href="index.html">⬅️ Zpět</a>
-            <a class="nav-btn" href="index.html">🏠 Domů</a>
-            <a class="nav-btn" href="harmonogram.html">🕒 Harmonogram</a>
+            <a class="nav-btn" href="index.html"><span class="nav-icon" aria-hidden="true">⬅️</span>Zpět</a>
+            <a class="nav-btn" href="index.html"><span class="nav-icon" aria-hidden="true">🏠</span>Domů</a>
+            <a class="nav-btn" href="harmonogram.html"><span class="nav-icon" aria-hidden="true">🕒</span>Harmonogram</a>
         </nav>
 
         <section class="card">
