@@ -435,18 +435,25 @@
             display: inline-flex;
             align-items: center;
             justify-content: center;
+            width: 56px;
+            height: 56px;
+            border-radius: 10px;
+            background: rgba(31, 67, 130, 0.78);
             color: #ffffff !important;
-            transition: transform 0.15s ease, filter 0.15s ease;
+            border: 1px solid rgba(255, 255, 255, 0.35);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.24);
+            transition: transform 0.15s ease, filter 0.15s ease, background-color 0.15s ease;
         }
 
         .contact-social-link:hover {
             transform: translateY(-1px);
-            filter: brightness(1.12);
+            filter: brightness(1.08);
+            background: rgba(43, 90, 170, 0.82);
         }
 
         .contact-social-link svg {
-            width: 34px;
-            height: 34px;
+            width: 32px;
+            height: 32px;
             fill: currentColor;
         }
 
@@ -543,7 +550,8 @@
         }
 
         [data-theme="light"] .contact-social-link {
-            color: #0f3d91 !important;
+            background: rgba(33, 88, 168, 0.9);
+            border-color: rgba(255, 255, 255, 0.48);
         }
 
         [data-theme="light"] .map-frame-wrap {
