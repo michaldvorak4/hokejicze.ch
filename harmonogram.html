@@ -135,6 +135,35 @@
             font-size: 0.95rem;
         }
 
+        .contact-strip {
+            margin-top: 6px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+            text-align: center;
+            font-size: 1.05rem;
+            background: rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.28);
+            border-radius: 10px;
+            padding: 10px 14px;
+        }
+
+        .contact-item {
+            font-weight: 700;
+            color: #f3f8ff;
+        }
+
+        .contact-item a {
+            color: #ffd8a3;
+        }
+
+        .contact-separator {
+            color: rgba(255, 255, 255, 0.75);
+            font-weight: 700;
+        }
+
         [data-theme="light"] body {
             color: #13233f;
         }
@@ -174,6 +203,23 @@
             color: #ffffff;
         }
 
+        [data-theme="light"] .contact-strip {
+            background: rgba(255, 255, 255, 0.92);
+            border-color: rgba(17, 41, 86, 0.24);
+        }
+
+        [data-theme="light"] .contact-item {
+            color: #102a4d;
+        }
+
+        [data-theme="light"] .contact-item a {
+            color: #0b3f9a;
+        }
+
+        [data-theme="light"] .contact-separator {
+            color: rgba(16, 42, 84, 0.75);
+        }
+
         .site-footer {
             margin-top: 28px;
             background: transparent;
@@ -181,30 +227,6 @@
             border-radius: 0;
             padding: 16px 0 6px;
             line-height: 1.6;
-        }
-
-        .site-footer h2 {
-            margin: 0 0 8px;
-            border-left: 4px solid var(--oranzova);
-            padding-left: 10px;
-            font-size: 1.1rem;
-        }
-
-        .site-footer p {
-            margin: 4px 0;
-        }
-
-        .site-footer a {
-            color: #ffd8a3;
-            font-weight: 700;
-        }
-
-        .site-footer a:hover {
-            color: #ffffff;
-        }
-
-        [data-theme="light"] .site-footer a {
-            color: #0f3d91;
         }
 
         [data-theme="light"] .site-footer {
@@ -298,10 +320,13 @@
         </section>
 
         <footer class="site-footer">
-            <h2>Kontaktní údaje</h2>
-            <p>E-mail: <a href="mailto:michaldvorak4@gmail.com">michaldvorak4@gmail.com</a></p>
-            <p>Telefon: <a href="tel:+420737738496">+420 737 738 496</a></p>
-            <p>Michal Dvořák</p>
+            <div class="contact-strip" aria-label="Kontaktní údaje pořadatele">
+                <span class="contact-item">Michal Dvořák</span>
+                <span class="contact-separator" aria-hidden="true">/</span>
+                <span class="contact-item">E-mail: <a href="mailto:michaldvorak4@gmail.com">michaldvorak4@gmail.com</a></span>
+                <span class="contact-separator" aria-hidden="true">/</span>
+                <span class="contact-item">Telefon: <a href="tel:+420737738496">+420 737 738 496</a></span>
+            </div>
         </footer>
     </div>
     <script>
