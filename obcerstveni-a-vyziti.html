@@ -49,6 +49,14 @@
             align-items: center;
         }
 
+        .nav-logo {
+            width: 40px;
+            height: 40px;
+            object-fit: contain;
+            filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.3));
+            opacity: 0.95;
+        }
+
         .nav-btn {
             text-decoration: none;
             color: #fff;
@@ -196,6 +204,9 @@
             color: #203a63;
         }
 
+        [data-theme="light"] .nav-logo {
+            filter: drop-shadow(0 3px 8px rgba(10, 24, 50, 0.28));
+        }
         [data-theme="light"] .nav-btn,
         [data-theme="light"] .theme-toggle {
             background: rgba(33, 88, 168, 0.95);
@@ -264,6 +275,7 @@
 <body>
     <div class="container">
         <nav class="top-nav" aria-label="Navigace stránky">
+            <img class="nav-logo" src="Logo s průhledným pozadím - malé na web.svg" alt="Logo Kolej cup 2026" aria-hidden="true">
             <a class="nav-btn" href="index.html">⬅️ Zpět</a>
             <a class="nav-btn" href="index.html">🏠 Domů</a>
             <a class="nav-btn" href="harmonogram.html">🕒 Harmonogram</a>
