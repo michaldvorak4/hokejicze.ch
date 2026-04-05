@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700" role="img" aria-labelledby="logoTitle logoDesc">
+  <title id="logoTitle">Hockey Kolej CUP 2026</title>
+  <desc id="logoDesc">Turnajové logo Hockey Kolej CUP 2026 ve sportovním stylu.</desc>
+  <defs>
+    <linearGradient id="blueBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#041c55"/>
+      <stop offset="100%" stop-color="#0f3d91"/>
+    </linearGradient>
+    <linearGradient id="lightText" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#cce7ff"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#021437" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+
+  <g filter="url(#shadow)">
+    <ellipse cx="605" cy="355" rx="370" ry="200" fill="none" stroke="#ffffff" stroke-width="44"/>
+    <ellipse cx="605" cy="355" rx="370" ry="200" fill="none" stroke="#ff8e1a" stroke-width="28" stroke-dasharray="170 38 210 42"/>
+
+    <rect x="165" y="95" width="120" height="290" rx="35" fill="#e7f6ff" stroke="#a5d9ff" stroke-width="16" transform="rotate(16 165 95)"/>
+    <rect x="203" y="132" width="42" height="178" rx="16" fill="#0a2f73" transform="rotate(16 203 132)"/>
+    <rect x="210" y="180" width="34" height="88" fill="#ff8e1a" transform="rotate(16 210 180)"/>
+
+    <path d="M190 455 L310 235 L980 210 L910 450 L760 478 L672 538 L242 565 Z" fill="url(#blueBg)" stroke="#ffffff" stroke-width="16"/>
+
+    <text x="605" y="305" text-anchor="middle" font-family="Arial, sans-serif" font-size="72" font-style="italic" fill="#ffffff" letter-spacing="5">Hockey</text>
+    <text x="605" y="420" text-anchor="middle" font-family="Arial, sans-serif" font-weight="700" font-size="124" fill="url(#lightText)">Kolej CUP</text>
+    <text x="605" y="512" text-anchor="middle" font-family="Arial, sans-serif" font-weight="700" font-size="76" fill="#ffffff" letter-spacing="6">2026</text>
+
+    <path d="M792 508 L949 534 C962 537 969 550 964 561 C960 572 946 579 932 575 L773 549 Z" fill="#f5fbff" stroke="#9dd3ff" stroke-width="12"/>
+    <ellipse cx="745" cy="552" rx="88" ry="38" fill="#0b2f72" stroke="#d3eeff" stroke-width="14"/>
+    <path d="M697 548 C730 536 760 536 791 548" fill="none" stroke="#ffffff" stroke-width="8"/>
+  </g>
+</svg>
