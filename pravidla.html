@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kolej cup 2026 | Pravidla turnaje</title>
+    <style>
+        :root {
+            --oranzova: #ff9d2d;
+            --bila: #ffffff;
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            font-family: 'Arial', sans-serif;
+            color: var(--bila);
+            background-image: url('https://images.pexels.com/photos/28374813/pexels-photo-28374813.jpeg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            position: relative;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            background: linear-gradient(145deg, rgba(2, 14, 44, 0.84), rgba(6, 22, 58, 0.76));
+            z-index: -1;
+        }
+
+        .container {
+            max-width: 980px;
+            margin: 0 auto;
+            padding: 24px 20px 40px;
+        }
+
+        .top-nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 16px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .nav-btn {
+            text-decoration: none;
+            color: #fff;
+            background: rgba(30, 63, 122, 0.9);
+            border: 1px solid rgba(255, 255, 255, 0.45);
+            border-radius: 10px;
+            padding: 10px 14px;
+            font-weight: 700;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .theme-toggle {
+            border: 1px solid rgba(255, 255, 255, 0.45);
+            background: rgba(30, 63, 122, 0.9);
+            color: #ffffff;
+            border-radius: 10px;
+            padding: 10px 14px;
+            font-weight: 700;
+            cursor: pointer;
+            font-family: inherit;
+        }
+
+        .card {
+            margin-top: 18px;
+            background: rgba(2, 13, 36, 0.84);
+            border: 1px solid rgba(255, 255, 255, 0.24);
+            border-radius: 16px;
+            padding: 24px;
+            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.38);
+        }
+
+        h1 {
+            margin: 0;
+            font-size: clamp(2rem, 6vw, 3.2rem);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .subtitle { color: #e9f2ff; margin: 8px 0 0; }
+
+        h2 {
+            margin-top: 22px;
+            margin-bottom: 10px;
+            border-left: 4px solid var(--oranzova);
+            padding-left: 10px;
+        }
+
+        ul { margin: 8px 0 0; padding-left: 22px; line-height: 1.7; }
+        li { margin-bottom: 6px; }
+        .rule-text { line-height: 1.7; }
+
+        [data-theme="light"] body { color: #13233f; }
+        [data-theme="light"] body::before { background: linear-gradient(145deg, rgba(178, 196, 226, 0.72), rgba(155, 181, 220, 0.66)); }
+        [data-theme="light"] .card { background: rgba(227, 236, 250, 0.9); border-color: rgba(17, 41, 86, 0.2); box-shadow: 0 10px 25px rgba(10, 24, 50, 0.16); }
+        [data-theme="light"] .subtitle, [data-theme="light"] .rule-text { color: #203a63; }
+        [data-theme="light"] .nav-btn, [data-theme="light"] .theme-toggle { background: rgba(33, 88, 168, 0.95); color: #ffffff; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav class="top-nav" aria-label="Navigace stránky">
+            <a class="nav-btn" href="index.html">⬅️ Zpět</a>
+            <a class="nav-btn" href="index.html">🏠 Domů</a>
+            <a class="nav-btn" href="harmonogram.html">🕒 Harmonogram</a>
+            <a class="nav-btn" href="obcerstveni-a-vyziti.html">🍔 Občerstvení a vyžití</a>
+            <button class="theme-toggle" type="button" data-theme-toggle>☀️ Denní režim</button>
+        </nav>
+
+        <section class="card">
+            <h1>Pravidla turnaje v pozemáčku</h1>
+            <p class="subtitle">Kolej CUP</p>
+
+            <div class="rule-text">
+                <h2>1. Obecná ustanovení</h2>
+                <p>Kolej CUP je přátelský sportovní turnaj v pozemáčku zaměřený na fair play, respekt a zábavu. Všichni účastníci jsou povinni řídit se těmito pravidly a pokyny organizátorů a rozhodčích.</p>
+
+                <h2>2. Formát turnaje</h2>
+                <ul>
+                    <li>Turnaje se účastní 10 týmů rozdělených do 2 skupin po 5 týmech.</li>
+                    <li>Po základní části postupuje 8 týmů do play-off.</li>
+                    <li>Play-off se hraje vyřazovacím systémem na 1 vítězný zápas.</li>
+                    <li>Součástí je i zápas o 3. místo.</li>
+                </ul>
+
+                <h2>3. Herní systém zápasu</h2>
+                <ul>
+                    <li>Zápas se hraje na 2× 10 minut hrubého času.</li>
+                    <li>Čas se nezastavuje.</li>
+                    <li>Pauza mezi třetinami je cca 1–2 minuty.</li>
+                    <li>Hraje se ve formátu 3 na 3 bez brankáře.</li>
+                    <li>Maximální počet hráčů v týmu: 6.</li>
+                    <li>Střídání probíhá libovolně během hry.</li>
+                </ul>
+
+                <h2>4. Bodování a pořadí ve skupině</h2>
+                <ul>
+                    <li>Výhra: 2 body</li>
+                    <li>Remíza: 1 bod</li>
+                    <li>Prohra: 0 bodů</li>
+                </ul>
+                <p>Pořadí ve skupině se určuje podle: 1) vyššího počtu bodů, 2) lepších vzájemných zápasů, 3) lepšího rozdílu skóre, 4) vyššího počtu vstřelených gólů.</p>
+
+                <h2>5. Play-off</h2>
+                <ul>
+                    <li>V případě remízy následuje prodloužení 222 sekund.</li>
+                    <li>Pokud nerozhodne prodloužení, následuje trestné střílení.</li>
+                </ul>
+                <p><strong>Trestné střílení:</strong> Každý tým nominuje 3 střelce. Pokud není rozhodnuto, pokračuje se systémem náhlé smrti.</p>
+
+                <h2>6. Herní pravidla</h2>
+                <ul>
+                    <li>Hraje se s oranžovým míčkem.</li>
+                    <li>Hra je bez brankáře.</li>
+                    <li>Důraz je kladen na plynulost hry a bezpečnost hráčů.</li>
+                </ul>
+
+                <h2>7. Fauly a tresty</h2>
+                <p>Za faul se považuje zejména:</p>
+                <ul>
+                    <li>hra vysokou holí,</li>
+                    <li>nebezpečný zákrok,</li>
+                    <li>úmyslné bránění v pohybu soupeře,</li>
+                    <li>hrubý kontakt nebo bodyček,</li>
+                    <li>sekání, podrážení nebo krosček.</li>
+                </ul>
+                <p><strong>Tresty:</strong></p>
+                <ul>
+                    <li>Menší faul – nepřímý volný úder pro soupeře.</li>
+                    <li>Závažný faul – samostatný nájezd.</li>
+                    <li>Hrubé nebo opakované porušení – vyloučení hráče ze zápasu nebo turnaje.</li>
+                </ul>
+                <p>Rozhodčí může posoudit situaci individuálně dle závažnosti.</p>
+
+                <h2>8. Rozhodčí</h2>
+                <ul>
+                    <li>Každý zápas řídí rozhodčí určený organizátorem.</li>
+                    <li>Rozhodčí má konečné slovo ve všech situacích.</li>
+                    <li>Rozhodčí dohlíží na dodržování pravidel, plynulost hry a bezpečnost hráčů.</li>
+                    <li>Nesportovní chování vůči rozhodčímu může vést k vyloučení z turnaje.</li>
+                </ul>
+
+                <h2>9. Výstroj</h2>
+                <ul>
+                    <li>Rukavice jsou povinné.</li>
+                    <li>Doporučena je další ochranná výstroj.</li>
+                    <li>Každý hráč hraje na vlastní odpovědnost.</li>
+                </ul>
+
+                <h2>10. Fair play</h2>
+                <ul>
+                    <li>Respektujte soupeře, spoluhráče i rozhodčí.</li>
+                    <li>Turnaj je koncipován jako good feeling day.</li>
+                    <li>Organizátor si vyhrazuje právo vyloučit tým nebo hráče při hrubém porušení pravidel.</li>
+                </ul>
+
+                <h2>11. Závěrečná ustanovení</h2>
+                <ul>
+                    <li>Týmy musí být připraveny nastoupit včas.</li>
+                    <li>Organizátor si vyhrazuje právo upravit harmonogram.</li>
+                    <li>Účastí v turnaji souhlasíte s těmito pravidly.</li>
+                </ul>
+
+                <p><strong>Hraj fér. Hraj naplno. Užij si den. Dej si pivo.</strong></p>
+            </div>
+        </section>
+    </div>
+    <script>
+        const themeButtons = document.querySelectorAll('[data-theme-toggle]');
+        const themeStorageKey = 'kolej-cup-theme';
+
+        function getInitialTheme() {
+            const storedTheme = localStorage.getItem(themeStorageKey);
+            if (storedTheme === 'light' || storedTheme === 'dark') {
+                return storedTheme;
+            }
+            return window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+        }
+
+        function applyTheme(theme) {
+            document.documentElement.setAttribute('data-theme', theme);
+            const label = theme === 'light' ? '🌙 Noční režim' : '☀️ Denní režim';
+            themeButtons.forEach((button) => {
+                button.textContent = label;
+                button.setAttribute('aria-label', label);
+            });
+        }
+
+        applyTheme(getInitialTheme());
+
+        themeButtons.forEach((button) => {
+            button.addEventListener('click', () => {
+                const currentTheme = document.documentElement.getAttribute('data-theme') || 'dark';
+                const nextTheme = currentTheme === 'dark' ? 'light' : 'dark';
+                applyTheme(nextTheme);
+                localStorage.setItem(themeStorageKey, nextTheme);
+            });
+        });
+    </script>
+</body>
+</html>
