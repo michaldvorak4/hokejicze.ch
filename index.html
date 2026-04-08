@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kolej cup 2026 | Hokejbalový turnaj</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
         :root {
             --modra-1: #031b4e;
             --modra-2: #0f3d91;
@@ -21,7 +22,7 @@
         body {
             margin: 0;
             min-height: 100vh;
-            font-family: 'Arial', sans-serif;
+            font-family: 'Inter', 'Segoe UI', 'Arial', sans-serif;
             color: var(--bila);
             background-image: url('https://images.pexels.com/photos/28374813/pexels-photo-28374813.jpeg');
             background-size: cover;
@@ -41,16 +42,16 @@
         }
 
         .container {
-            max-width: 920px;
+            max-width: 1080px;
             margin: 0 auto;
-            padding: 28px 20px 40px;
+            padding: 34px 24px 56px;
         }
 
         .theme-toggle {
             border: 1px solid rgba(255, 255, 255, 0.45);
             background: rgba(30, 63, 122, 0.9);
             color: #ffffff;
-            border-radius: 10px;
+            border-radius: 14px;
             padding: 10px 14px;
             font-weight: 700;
             cursor: pointer;
@@ -71,7 +72,7 @@
             border: 1px solid rgba(255, 255, 255, 0.45);
             background: rgba(30, 63, 122, 0.9);
             color: #ffffff;
-            border-radius: 10px;
+            border-radius: 14px;
             padding: 10px 12px;
             font-weight: 700;
             cursor: pointer;
@@ -82,7 +83,7 @@
             border: 1px solid rgba(255, 255, 255, 0.45);
             background: rgba(30, 63, 122, 0.9);
             color: #ffffff;
-            border-radius: 10px;
+            border-radius: 14px;
             padding: 10px 14px;
             font-weight: 700;
             text-decoration: none;
@@ -92,13 +93,13 @@
         }
 
         header {
-            background: rgba(3, 16, 40, 0.78);
+            background: linear-gradient(160deg, rgba(8, 28, 68, 0.8), rgba(6, 20, 49, 0.78));
             border: 1px solid rgba(255, 255, 255, 0.28);
-            border-radius: 18px;
-            backdrop-filter: blur(6px);
+            border-radius: 28px;
+            backdrop-filter: blur(14px);
             text-align: center;
-            padding: 34px 24px;
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.42);
+            padding: 44px 34px;
+            box-shadow: 0 24px 54px rgba(0, 0, 0, 0.44);
         }
 
 
@@ -130,12 +131,12 @@
         }
 
         .card {
-            margin-top: 22px;
-            background: rgba(2, 13, 36, 0.84);
+            margin-top: 26px;
+            background: linear-gradient(170deg, rgba(8, 25, 63, 0.84), rgba(5, 17, 44, 0.8));
             border: 1px solid rgba(255, 255, 255, 0.24);
-            border-radius: 16px;
-            padding: 30px;
-            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.38);
+            border-radius: 22px;
+            padding: 32px;
+            box-shadow: 0 18px 38px rgba(0, 0, 0, 0.35);
         }
 
         .card h2 {
@@ -145,14 +146,14 @@
         }
 
         .info {
-            line-height: 1.75;
-            font-size: 1.15rem;
+            line-height: 1.8;
+            font-size: 1.08rem;
             white-space: pre-line;
-            background: rgba(0, 0, 0, 0.28);
+            background: rgba(0, 0, 0, 0.2);
             border: 1px solid rgba(255, 255, 255, 0.28);
             border-radius: 12px;
-            padding: 20px;
-            min-height: 240px;
+            padding: 24px;
+            min-height: 210px;
         }
 
         .actions {
@@ -170,22 +171,24 @@
             justify-content: center;
             text-decoration: none;
             padding: 12px 18px;
-            border-radius: 10px;
+            border-radius: 14px;
             font-weight: 700;
-            transition: transform 0.15s ease, box-shadow 0.15s ease;
+            transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease, background 0.2s ease;
         }
 
         .btn:hover {
-            transform: translateY(-2px);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 22px rgba(0, 0, 0, 0.28);
+            border-color: rgba(255, 255, 255, 0.6);
         }
 
         .btn-primary,
         .btn-secondary,
         .schedule-link {
-            background: #1e3f7a;
+            background: linear-gradient(135deg, #1f4b98, #12336b);
             color: #ffffff;
             border: 1px solid rgba(255, 255, 255, 0.35);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.32);
+            box-shadow: 0 12px 26px rgba(0, 0, 0, 0.32);
         }
 
         .btn-icon {
@@ -335,7 +338,7 @@
             align-items: center;
             text-decoration: none;
             padding: 14px;
-            border-radius: 10px;
+            border-radius: 14px;
             font-weight: 700;
         }
 
@@ -418,6 +421,56 @@
         }
 
 
+
+
+        body::after {
+            content: "";
+            position: fixed;
+            width: min(50vw, 560px);
+            aspect-ratio: 1;
+            right: -14vw;
+            top: -18vh;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(97, 154, 255, 0.34), rgba(97, 154, 255, 0));
+            filter: blur(14px);
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        .header-link,
+        .theme-toggle,
+        .audio-toggle {
+            transition: transform 0.2s ease, filter 0.2s ease, background 0.2s ease;
+        }
+
+        .header-link:hover,
+        .theme-toggle:hover,
+        .audio-toggle:hover {
+            transform: translateY(-2px);
+            filter: brightness(1.08);
+        }
+
+        .card h2 {
+            font-size: clamp(1.2rem, 2.2vw, 1.55rem);
+            letter-spacing: 0.3px;
+        }
+
+        .teams-table tbody tr:hover,
+        .group-table tbody tr:hover {
+            background: rgba(255, 255, 255, 0.09);
+        }
+
+        .match,
+        .placement {
+            transition: transform 0.18s ease, border-color 0.18s ease;
+        }
+
+        .match:hover,
+        .placement:hover {
+            transform: translateY(-2px);
+            border-color: rgba(255, 255, 255, 0.48);
+        }
+
         .map-section {
             margin-top: 24px;
         }
@@ -448,7 +501,7 @@
             font-size: 1.05rem;
             background: rgba(2, 13, 36, 0.58);
             border: 1px solid rgba(255, 255, 255, 0.28);
-            border-radius: 10px;
+            border-radius: 14px;
             padding: 10px 14px;
         }
 
@@ -483,7 +536,7 @@
             justify-content: center;
             width: 56px;
             height: 56px;
-            border-radius: 10px;
+            border-radius: 14px;
             background: rgba(31, 67, 130, 0.78);
             color: #ffffff !important;
             border: 1px solid rgba(255, 255, 255, 0.35);

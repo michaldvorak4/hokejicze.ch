@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kolej cup 2026 | Občerstvení a vyžití</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
         :root {
             --oranzova: #ff9d2d;
             --bila: #ffffff;
@@ -17,7 +18,7 @@
         body {
             margin: 0;
             min-height: 100vh;
-            font-family: 'Arial', sans-serif;
+            font-family: 'Inter', 'Segoe UI', 'Arial', sans-serif;
             color: var(--bila);
             background-image: url('https://images.pexels.com/photos/28374813/pexels-photo-28374813.jpeg');
             background-size: cover;
@@ -35,9 +36,9 @@
         }
 
         .container {
-            max-width: 920px;
+            max-width: 1000px;
             margin: 0 auto;
-            padding: 24px 20px 40px;
+            padding: 34px 24px 56px;
         }
 
         .top-nav {
@@ -60,34 +61,56 @@
         .nav-btn {
             text-decoration: none;
             color: #fff;
-            background: rgba(30, 63, 122, 0.9);
+            background: linear-gradient(135deg, #1f4b98, #12336b);
             border: 1px solid rgba(255, 255, 255, 0.45);
-            border-radius: 10px;
+            border-radius: 14px;
             padding: 10px 14px;
             font-weight: 700;
             display: inline-flex;
             align-items: center;
             gap: 8px;
+            transition: transform 0.2s ease, filter 0.2s ease;
         }
 
         .theme-toggle {
             border: 1px solid rgba(255, 255, 255, 0.45);
-            background: rgba(30, 63, 122, 0.9);
+            background: linear-gradient(135deg, #1f4b98, #12336b);
             color: #ffffff;
-            border-radius: 10px;
+            border-radius: 14px;
             padding: 10px 14px;
             font-weight: 700;
             cursor: pointer;
             font-family: inherit;
+            transition: transform 0.2s ease, filter 0.2s ease;
+        }
+
+        body::after {
+            content: "";
+            position: fixed;
+            width: min(50vw, 560px);
+            aspect-ratio: 1;
+            right: -14vw;
+            top: -18vh;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(97, 154, 255, 0.3), rgba(97, 154, 255, 0));
+            filter: blur(14px);
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        .nav-btn:hover,
+        .theme-toggle:hover {
+            transform: translateY(-2px);
+            filter: brightness(1.08);
         }
 
         .card {
             margin-top: 18px;
             background: rgba(2, 13, 36, 0.84);
             border: 1px solid rgba(255, 255, 255, 0.24);
-            border-radius: 16px;
-            padding: 24px;
-            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.38);
+            border-radius: 22px;
+            padding: 30px;
+            box-shadow: 0 18px 38px rgba(0, 0, 0, 0.35);
         }
 
         h1 {
@@ -152,7 +175,7 @@
             font-size: 1.05rem;
             background: rgba(2, 13, 36, 0.58);
             border: 1px solid rgba(255, 255, 255, 0.28);
-            border-radius: 10px;
+            border-radius: 14px;
             padding: 10px 14px;
         }
 
@@ -224,7 +247,7 @@
             justify-content: center;
             width: 56px;
             height: 56px;
-            border-radius: 10px;
+            border-radius: 14px;
             background: rgba(31, 67, 130, 0.78);
             color: #ffffff !important;
             border: 1px solid rgba(255, 255, 255, 0.35);
