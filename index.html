@@ -674,6 +674,40 @@
         [data-theme="light"] .site-footer {
             color: #13233f;
         }
+
+        @media (max-width: 700px) {
+            .container { padding: 18px 14px 36px; }
+            header { padding: 28px 16px; border-radius: 18px; }
+            .card { padding: 20px 14px; border-radius: 16px; }
+            .header-controls {
+                width: 100%;
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+            .header-link, .theme-toggle, .audio-toggle {
+                padding: 9px 11px;
+                border-radius: 11px;
+                font-size: 0.9rem;
+                gap: 6px;
+            }
+            .btn {
+                width: 100%;
+                padding: 11px 14px;
+                font-size: 0.97rem;
+            }
+            .btn-icon { font-size: 1rem; }
+            .contact-socials { gap: 10px; }
+            .contact-social-link {
+                width: 48px;
+                height: 48px;
+                border-radius: 12px;
+            }
+            .contact-social-link svg {
+                width: 26px;
+                height: 26px;
+            }
+        }
+
     </style>
 </head>
 <body>
@@ -707,7 +741,7 @@ Hřiště: hraje se na asfaltu, florbalové mantinely 20x10 m (2 hřiště)</p>
             <div class="actions">
                 <a class="btn btn-primary" href="https://docs.google.com/forms/d/1JX-1A7jdqEMe4naP6St_THMiYpm7XcnhRR6VnxrarWU/edit" target="_blank" rel="noopener noreferrer"><span class="btn-icon" aria-hidden="true">📝</span>Přihlášení týmu</a>
                 <a class="btn btn-secondary" href="https://maps.app.goo.gl/AUreZmJZVnPGFoPw8" target="_blank" rel="noopener noreferrer"><span class="btn-icon" aria-hidden="true">📍</span>Mapa místa konání</a>
-                <a class="btn btn-secondary" href="pravidla.html"><span class="btn-icon" aria-hidden="true">📘</span>Pravidla turnaje</a>
+                <a class="btn btn-secondary" href="pravidla.html"><span class="btn-icon" aria-hidden="true">📘</span>Pravidla turnaje (v2)</a>
             </div>
         </section>
 

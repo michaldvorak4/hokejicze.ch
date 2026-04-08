@@ -139,6 +139,20 @@
             filter: drop-shadow(0 3px 8px rgba(10, 24, 50, 0.28));
         }
         [data-theme="light"] .nav-btn, [data-theme="light"] .theme-toggle { background: rgba(33, 88, 168, 0.95); color: #ffffff; }
+
+        @media (max-width: 700px) {
+            .container { padding: 18px 14px 36px; }
+            .card { padding: 20px 16px; border-radius: 16px; }
+            .top-nav { gap: 8px; }
+            .nav-logo { width: 34px; height: 34px; }
+            .nav-btn, .theme-toggle {
+                padding: 9px 11px;
+                font-size: 0.92rem;
+                border-radius: 11px;
+                gap: 6px;
+            }
+        }
+
     </style>
 </head>
 <body>
@@ -153,7 +167,7 @@
 
         <section class="card">
             <h1>Pravidla turnaje v pozemáčku</h1>
-            <p class="subtitle">Kolej CUP</p>
+            <p class="subtitle">Kolej CUP · verze 2 (2026)</p>
 
             <div class="rule-text">
                 <h2>1. Obecná ustanovení</h2>
@@ -173,7 +187,7 @@
                     <li>Čas se nezastavuje.</li>
                     <li>Pauza mezi třetinami je cca 1–2 minuty.</li>
                     <li>Hraje se ve formátu 3 na 3 bez brankáře.</li>
-                    <li>Maximální počet hráčů v týmu: 6.</li>
+                    <li>Maximální počet hráčů v týmu: 8.</li>
                     <li>Střídání probíhá libovolně během hry.</li>
                 </ul>
 
@@ -195,8 +209,21 @@
                 <h2>6. Herní pravidla</h2>
                 <ul>
                     <li>Hraje se s oranžovým míčkem.</li>
+                    <li>Brankoviště je vyznačeno před brankou (doporučený půlkruh cca 1,5 m od středu branky).</li>
+                    <li>Bránící hráč nesmí v brankovišti stát ani v něm setrvávat.</li>
+                    <li>Pokud obránce ovlivní hru z brankoviště, rozhodčí může uznat gól nebo nařídit samostatný nájezd.</li>
+                    <li>Útočící hráč může brankovištěm projet, nesmí v něm blokovat hru.</li>
                     <li>Hra je bez brankáře.</li>
                     <li>Důraz je kladen na plynulost hry a bezpečnost hráčů.</li>
+                </ul>
+
+                <h2>6.1 Rozehrávka</h2>
+                <ul>
+                    <li>Při vyhození míčku mimo hrací plochu se hra přeruší.</li>
+                    <li>Rozehrává tým, který se míčku nedotkl jako poslední.</li>
+                    <li>Rozehrává se z místa opuštění hrací plochy (nebo nejbližšího vhodného bodu).</li>
+                    <li>Hráči soupeře musí stát alespoň 2 metry od míčku.</li>
+                    <li>Rozehrávka musí být bez zbytečného zdržování.</li>
                 </ul>
 
                 <h2>7. Fauly a tresty</h2>
@@ -243,6 +270,12 @@
                     <li>Týmy musí být připraveny nastoupit včas.</li>
                     <li>Organizátor si vyhrazuje právo upravit harmonogram.</li>
                     <li>Účastí v turnaji souhlasíte s těmito pravidly.</li>
+                </ul>
+
+                <h2>12. Organizátorský tým</h2>
+                <ul>
+                    <li>Hlavní organizátor: Michal Dvořák.</li>
+                    <li>Organizační tým: Kuba Dvořák, Barča Žáčková, Walter Groer.</li>
                 </ul>
 
                 <p><strong>Hraj fér. Hraj naplno. Užij si den. Dej si pivo.</strong></p>
